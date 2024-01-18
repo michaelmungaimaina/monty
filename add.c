@@ -1,4 +1,5 @@
 #include "monty.h"
+bus_type bus;
 /**
  * _add - adds the top two elements of the stack.
  * @head: stack head
@@ -7,13 +8,13 @@
 */
 void _add(stack_type **head, unsigned int counter)
 {
-	stack_type *hd;
+	stack_type *h;
 	int len = 0, aux;
 
-	hd = *head;
-	while (hd)
+	h = *head;
+	while (h)
 	{
-		hd = hd->next;
+		h = h->next;
 		len++;
 	}
 	if (len < 2)
@@ -24,9 +25,9 @@ void _add(stack_type **head, unsigned int counter)
 		clear_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	hd = *head;
-	aux = hd->n + hd->next->n;
-	hd->next->n = aux;
-	*head = hd->next;
-	free(hd);
+	h = *head;
+	aux = h->n + h->next->n;
+	h->next->n = aux;
+	*head = h->next;
+	free(h);
 }
