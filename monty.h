@@ -67,3 +67,4 @@ ssize_t getstdin(char **lineptr, int file);
 char  *del_line(char *content);
 int exec(char *content, stack_type **head, unsigned int counter, FILE *file);
 void clear_stack(stack_type *head);
+#endif
