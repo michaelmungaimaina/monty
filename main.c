@@ -1,7 +1,7 @@
 #include "monty.h"
 #include <stdio.h>
 
-bus_type global_bus = {NULL, NULL, NULL, 0};
+bus_type bus = {NULL, NULL, NULL, 0};
 
 /**
 * main - Monty code interpreter
@@ -25,7 +25,7 @@ int main(int argument_count, char *argument_values[])
 	}
 
 	monty_file = fopen(argument_values[1], "r");
-	global_bus.file = monty_file;
+	bus.file = monty_file;
 
 	if (!monty_file)
 	{
@@ -37,7 +37,7 @@ int main(int argument_count, char *argument_values[])
 	{
 		line_content = NULL;
 		read_result = getline(&line_content, &buffer_size, monty_file);
-		global_bus.content = line_content;
+		bus.content = line_content;
 		line_counter++;
 
 		if (read_result > 0)

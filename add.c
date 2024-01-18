@@ -1,5 +1,4 @@
 #include "monty.h"
-bus_type bus;
 /**
  * _add - adds the top two elements of the stack.
  * @head: stack head
