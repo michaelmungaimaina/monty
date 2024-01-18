@@ -1,5 +1,7 @@
 #include "monty.h"
-bus_t global_bus = {NULL, NULL, NULL, 0};
+#include <stdio.h>
+
+bus_type global_bus = {NULL, NULL, NULL, 0};
 
 /**
 * main - Monty code interpreter
